@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\main",
+    "\\main\\java",
+    "\\main\\java\\com",
+    "\\main\\java\\com\\mindex",
+    "\\main\\java\\com\\mindex\\challenge",
+    "\\main\\java\\com\\mindex\\challenge\\config",
+    "\\main\\java\\com\\mindex\\challenge\\controller",
+    "\\main\\resources",
+    "\\main\\resources\\templates"
+  ],
+  "SelectedNode": "\\main\\java\\com\\mindex\\challenge\\dao\\EmployeeRepository.java",
+  "PreviewInSolutionExplorer": false
+}
