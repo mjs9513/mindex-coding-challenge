@@ -18,6 +18,9 @@ public class DataBootstrapTest {
     @Autowired
     private EmployeeRepository employeeRepository;
 
+    @Autowired
+    private CompensationRepository compensationRepository;
+
     @Test
     public void test() {
         Employee employee = employeeRepository.findByEmployeeId("16a596ae-edd3-4847-99fe-c4518e82c86f");
