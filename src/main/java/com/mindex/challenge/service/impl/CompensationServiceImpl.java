@@ -22,7 +22,7 @@ public class CompensationServiceImpl implements CompensationService {
 
     @Override
     public Compensation create(Compensation compensation) {
-        LOG.debug("Creating employee Compensation report [{}]", compensation);
+        LOG.debug("Creating Compensation report [{}]", compensation);
 
         compensationRepository.insert(compensation);
 
@@ -31,7 +31,7 @@ public class CompensationServiceImpl implements CompensationService {
 
     @Override
     public Compensation read(String id) {
-        LOG.debug("Creating employee with id [{}]", id);
+        LOG.debug("Reading compensation for employee with id [{}]", id);
 
         Compensation compensation = compensationRepository.findByEmployeeId(id);
 
