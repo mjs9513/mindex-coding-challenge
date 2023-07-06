@@ -20,6 +20,9 @@ public class CompensationServiceImpl implements CompensationService {
     @Autowired
     private CompensationRepository compensationRepository;
 
+    @Autowired
+    private EmployeeRepository employeeRepository;
+
     @Override
     public Compensation create(Compensation compensation) {
         LOG.debug("Creating Compensation report [{}]", compensation);
@@ -33,10 +36,16 @@ public class CompensationServiceImpl implements CompensationService {
     public Compensation read(String id) {
         LOG.debug("Reading compensation for employee with id [{}]", id);
 
-        Compensation compensation = compensationRepository.findByEmployeeId(id);
+        Employee employee = employeeRepository.findByEmployeeId(id);
+
+        if (employee == null) {
+            throw new RuntimeException("Invalid employee, unable to find employee for: " + id);
+        }
+
+        Compensation compensation = compensationRepository.findByEmployee(employee);
 
         if (compensation == null) {
-            throw new RuntimeException("Invalid employeeId or compensation not found: " + id);
+            throw new RuntimeException("Compensation not found for: " + id);
         }
 
         return compensation;
