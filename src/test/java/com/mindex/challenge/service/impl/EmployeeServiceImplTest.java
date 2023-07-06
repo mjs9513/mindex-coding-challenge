@@ -1,7 +1,9 @@
 package com.mindex.challenge.service.impl;
 
 import com.mindex.challenge.data.Employee;
+import com.mindex.challenge.data.Compensation;
 import com.mindex.challenge.service.EmployeeService;
+import com.mindex.challenge.service.CompensationService;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;

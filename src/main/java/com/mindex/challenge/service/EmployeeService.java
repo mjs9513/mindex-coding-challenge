@@ -12,5 +12,5 @@ public interface EmployeeService {
     ReportingStructure createReportingStructure(String id);
     //ReportingStructure readReportingStructure(String id);
     //ReportingStructure read(String id);
-    //List<Employee> findAll();
+    //List<Employee> findAll(); // <- When I started out I was playing around with trying to get a FindAll function working for employees
 }
