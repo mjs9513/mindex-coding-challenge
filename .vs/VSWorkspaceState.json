@@ -8,9 +8,9 @@
     "\\src\\main\\java\\com\\mindex",
     "\\src\\main\\java\\com\\mindex\\challenge",
     "\\src\\main\\java\\com\\mindex\\challenge\\config",
-    "\\src\\main\\java\\com\\mindex\\challenge\\controller",
-    "\\src\\main\\java\\com\\mindex\\challenge\\dao"
+    "\\src\\main\\resources",
+    "\\src\\main\\resources\\static"
   ],
-  "SelectedNode": "\\src\\main\\java\\com\\mindex\\challenge\\service\\EmployeeService.java",
+  "SelectedNode": "\\src\\main\\java\\com\\mindex\\challenge\\service\\impl\\CompensationServiceImpl.java",
   "PreviewInSolutionExplorer": false
 }

@@ -37,7 +37,9 @@ public class EmployeeController {
         employee.setEmployeeId(id);
         return employeeService.update(employee);
     }
-
+}
+/* Originally I had attempted to mix Reporting Structure in with Employee classes but as my understanding of the structure grew
+I felt the best foot forward with it would be to add it to it's own separate class setup.
     @GetMapping("/reportingstructure/{id}")
     public ReportingStructure createReportingStructure(@PathVariable String id)
     {
@@ -45,7 +47,8 @@ public class EmployeeController {
         //return null;
         return employeeService.createReportingStructure(id);
     }
-}
+*/
+
 
     /*@GetMapping("/employees")
     public List<Employee> all() {

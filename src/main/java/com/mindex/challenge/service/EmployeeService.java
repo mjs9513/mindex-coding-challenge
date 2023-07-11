@@ -9,7 +9,8 @@ public interface EmployeeService {
     Employee read(String id);
     Employee update(Employee employee);
 
-    ReportingStructure createReportingStructure(String id);
+    //Moved Reporting Structure calls to its own suite of classes
+    //ReportingStructure createReportingStructure(String id);
     //ReportingStructure readReportingStructure(String id);
     //ReportingStructure read(String id);
     //List<Employee> findAll(); // <- When I started out I was playing around with trying to get a FindAll function working for employees

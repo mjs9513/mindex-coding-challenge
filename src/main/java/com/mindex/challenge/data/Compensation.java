@@ -11,12 +11,25 @@ import org.slf4j.LoggerFactory;
 import com.mindex.challenge.data.Employee;
 import java.util.List;
 
+//Very similar setup to Employees with set and get methods.
 public class Compensation {
     private static final Logger LOG = LoggerFactory.getLogger(ReportingStructure.class);
 
     private Employee employee;
     private float salary;
     private String effectiveDate;
+
+    //I had attempted a setup using the @RequestBody way of building a Compensation object, but ran into issues. I landed on this
+    //setup with a constructor that took variables as being an easier way to go about it and was able to get it working.
+    //Passed in the EmployeeService in order to look up the employee based on the EmployeeID as the way for setting the employee for the compensation object.
+    public Compensation(String employeeId, float compensationAmount, String effectiveDate, EmployeeService employeeFunctions)
+    {
+        Employee compensationEmployee = employeeFunctions.read(employeeId);
+
+        this.employee = compensationEmployee;
+        this.salary = compensationAmount;
+        this.effectiveDate = effectiveDate;
+    }
 
     public Compensation() {
     }

@@ -48,8 +48,10 @@ public class EmployeeServiceImpl implements EmployeeService {
 
         return employeeRepository.save(employee);
     }
-
-    @Override
+}
+    /*Originally I had attempted to mix Reporting Structure in with Employee classes but as my understanding of the structure grew
+    I felt the best foot forward with it would be to add it to it's own separate class setup.
+        @Override
     public ReportingStructure createReportingStructure(String id)
     {
         LOG.debug("Reading Reporting Structure for employee [{}]", id);
@@ -64,13 +66,12 @@ public class EmployeeServiceImpl implements EmployeeService {
         LOG.debug("Number of reports for the reporting structure: " + newReport.getNumberOfReports());
         return newReport;
     }
-    
+
     /*@Override
     public ReportingStructure read(String id)
     {
         return null;
     }*/
-}
 
     /*@Override
     public List<Employee> findAll()
